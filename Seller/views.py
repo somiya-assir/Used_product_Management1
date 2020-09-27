@@ -1,3 +1,14 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Seller
+#Create your views here.
+def showseller(request):
+    alluser = Seller.objects.all()
+
+    contex = {
+        'userlist': alluser
+    }
+    return render(request, 'sellermanagement/sellerlist.html', contex)
+
+
+
