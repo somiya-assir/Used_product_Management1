@@ -1,3 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Buyer
+
+
+def buyerinfo(request):
+    all_buyer=Buyer.objects.all()
+    context={
+        'buyerlist':all_buyer
+    }
+
+    return render(request,'Buyer/buyerinfo.html',context)

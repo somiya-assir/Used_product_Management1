@@ -19,8 +19,10 @@ from django.contrib import admin
 from django.urls import path
 
 from Seller import views as seller_views
+from Buyer import views as buyer_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('seller/',seller_views.showseller,name='sellerlist'),
+    path('buyer/',buyer_views.buyerinfo,name='buyer')
 ]
