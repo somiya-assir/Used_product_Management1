@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <h1> Buyercost information</h1>
+    {% for i in buyercostlist %}
+
+        {{ i.amount }}<br>
+
+        {{ i.employee_name }}<br>
+
+        {{ i.usedproduct }}<br>
+
+
+
+        <br>
+        <br>
+
+
+    {% endfor %}
+
+
+{% endblock content %}

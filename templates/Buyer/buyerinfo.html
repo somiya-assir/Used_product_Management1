@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>hello</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <h1> Buyer information</h1>
+    {% for i in buyerlist %}
+
+        {{ i.buyer_name }}<br>
+
+        {{ i.contact_no}}<br>
+
+
+        <br>
+        <br>
+
+
+    {% endfor %}
+
+
+{% endblock content %}

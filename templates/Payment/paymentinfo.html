@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <h1> Payment information</h1>
+    {% for i in paymentlist %}
+
+        {{ i.amount_Type }}<br>
+
+        {{ i.amount}}<br>
+        {{ i.Buyer }}<br>
+
+        <br>
+        <br>
+
+
+    {% endfor %}
+
+
+{% endblock content %}

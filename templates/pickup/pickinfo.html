@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <h1> Pickup information</h1>
+    {% for i in pickuplist%}
+
+        {{ i.Shedule }}<br>
+
+        {{ i.seller}}<br>
+        {{ i.employee_name }}<br>
+
+
+        <br>
+        <br>
+
+
+    {% endfor %}
+
+
+{% endblock content %}

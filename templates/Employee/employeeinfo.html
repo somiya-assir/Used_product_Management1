@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <h1> Employee information</h1>
+    {% for i in employeelist %}
+
+        {{ i.employee_name }}<br>
+
+        {{ i.contact}}<br>
+        {{ i.email}}<br>
+
+        <br>
+        <br>
+
+
+    {% endfor %}
+
+
+{% endblock content %}
