@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+import django.contrib.auth.urls
+
 
 from Seller import views as seller_views
 from Buyer import views as buyer_views
@@ -24,6 +26,7 @@ from Buyercost import  views as buyercost_views
 from Employee import views as employee_views
 from Payment import views as pay_views
 from pickup import views as pickup_views
+from Usermanagement import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +35,9 @@ urlpatterns = [
     path('buyercost',buyercost_views.buyercost,name='buyercost'),
     path('employee/',employee_views.employee,name='employee'),
     path('payment/',pay_views.showpayment,name='payment'),
-    path('pickup/',pickup_views.pickUp,name='pickup')
+    path('pickup/',pickup_views.pickUp,name='pickup'),
+    path('sellerinsert/',seller_views.insertseller,name='insertseller'),
+    path('registration',user_views.registration,name='registration'),
+    path('accounts/',include('django.contrib.auth.urls'))
 
 ]
