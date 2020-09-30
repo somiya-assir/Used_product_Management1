@@ -12,6 +12,7 @@ def registration(request):
 
         if form.is_valid():
          form.save()
+         #return redirect('login')
 
     context={
         'form':form

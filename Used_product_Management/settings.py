@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'Payment.apps.PaymentConfig',
     'Employee.apps.EmployeeConfig',
     'Buyercost.apps.BuyercostConfig',
-    'Buyer.apps.BuyerConfig'
+    'Buyer.apps.BuyerConfig',
+    'Usermanagement.apps.UsermanagementConfig'
 
 
 
