@@ -32,6 +32,7 @@ urlpatterns = [
     path('buyercost',buyercost_views.buyercost,name='buyercost'),
     path('employee/',employee_views.employee,name='employee'),
     path('payment/',pay_views.showpayment,name='payment'),
-    path('pickup/',pickup_views.pickUp,name='pickup')
+    path('pickup/',pickup_views.pickUp,name='pickup'),
+    path('sellerinsert/',seller_views.insertseller,name='insertseller')
 
 ]
