@@ -36,8 +36,12 @@ urlpatterns = [
     path('employee/',employee_views.employee,name='employee'),
     path('payment/',pay_views.showpayment,name='payment'),
     path('pickup/',pickup_views.pickUp,name='pickup'),
+<<<<<<< HEAD
     path('sellerinsert/',seller_views.insertseller,name='insertseller'),
     path('registration',user_views.registration,name='registration'),
     path('accounts/',include('django.contrib.auth.urls'))
+=======
+    path('sellerinsert/',seller_views.insertseller,name='insertseller')
+>>>>>>> 3c9ea3bb729d961a3c4ea4997c6d7e3eea20332d
 
 ]

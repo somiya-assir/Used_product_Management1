@@ -2,7 +2,10 @@ from django.shortcuts import render
 
 from .models import Seller
 from .forms import SellerInput
+<<<<<<< HEAD
 from django.contrib.auth.decorators import login_required
+=======
+>>>>>>> 3c9ea3bb729d961a3c4ea4997c6d7e3eea20332d
 #Create your views here.
 def showseller(request):
     alluser = Seller.objects.all()
@@ -29,6 +32,15 @@ def insertseller(request):
         'form':form,
         'msg':msg
 
+    }
+
+    return  render (request,'sellermanagement/insertseller.html',context)
+
+def insertseller(request):
+    form=SellerInput()
+
+    context={
+        'form':form
     }
 
     return  render (request,'sellermanagement/insertseller.html',context)
