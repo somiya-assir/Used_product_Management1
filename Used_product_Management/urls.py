@@ -39,7 +39,9 @@ urlpatterns = [
 
     path('sellerinsert/',seller_views.insertseller,name='insertseller'),
     path('registration',user_views.registration,name='registration'),
-    path('accounts/',include('django.contrib.auth.urls'))
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('createprofile/', user_views.create_profile, name='create_profile')
+
 
 
 ]
