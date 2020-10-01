@@ -8,6 +8,7 @@ class Usedproduct(models.Model):
     product_type=models.CharField(max_length=100)
     weight=models.IntegerField(blank=True,null=True)
     price=models.IntegerField(blank=True,null=True)
+    product_pic= models.ImageField(upload_to='images/product', blank=True, null=True)
     seller = models.ForeignKey(Seller, on_delete=models.CASCADE, default=1, null=True)
     Buyer = models.ForeignKey(Buyer, on_delete=models.CASCADE, default=1, null=True, blank=True)
 

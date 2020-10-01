@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1> Product information</h1>
+    {% for i in userlist %}
+        <h3>product type</h3>   {{ i.product_type}}<br>
+         <h3></h3>   <img src="{{ i.product_pic.url }}" height="388" width="300">
+         <h3>product weight:</h3>  {{ i.weight}}<br>
+         <h3>product price:</h3>  {{ i.price }}<br>
+
+
+
+        <br>
+        <br>
+    {% endfor %}
+
+{% endblock content %}

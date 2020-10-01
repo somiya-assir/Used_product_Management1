@@ -1,23 +1,16 @@
 
 {% extends 'base.html' %}
 
-
-
 {% block content %}
     <h1> Seller information</h1>
     {% for i in userlist %}
-
         {{ i.seller_name }}<br>
-
         {{ i.email}}<br>
         {{ i.address }}<br>
         {{ i.contact}}<br>
 
         <br>
         <br>
-
-
     {% endfor %}
-
 
 {% endblock content %}

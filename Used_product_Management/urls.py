@@ -28,6 +28,7 @@ from Employee import views as employee_views
 from Payment import views as pay_views
 from pickup import views as pickup_views
 from Usermanagement import views as user_views
+from Usedproduct import views as product_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -42,7 +43,9 @@ urlpatterns = [
     path('registration',user_views.registration,name='registration'),
     path('accounts/',include('django.contrib.auth.urls')),
     path('createprofile/', user_views.create_profile, name='create_profile'),
-    path('viewprofile/', user_views.view_profile, name='view_profile')
+    path('viewprofile/', user_views.view_profile, name='view_profile'),
+    path('showproduct/', product_views.showsproduct, name='show_product'),
+    path('insertproduct/', product_views.insertpoduct, name='insert_product'),
 
 
 
