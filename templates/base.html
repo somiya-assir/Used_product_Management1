@@ -12,10 +12,13 @@
 
 {% if user.is_authenticated %}
     <h3>{{ user.username }}</h3>
+
     <a href="{% url 'sellerlist' %}">sellerlist</a><br>
     <a href="{% url 'logout' %}">logout</a><br>
     <a href="{% url 'password_change' %}">change password</a><br>
     <a href="{% url 'create_profile' %}">Create Profile</a><br>
+    <a href="{% url 'view_profile' %}">Show Profile</a><br>
+
 
 
 {% else %}

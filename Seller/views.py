@@ -6,6 +6,7 @@ from .forms import SellerInput
 from django.contrib.auth.decorators import login_required
 
 #Create your views here.
+@login_required
 def showseller(request):
     alluser = Seller.objects.all()
 

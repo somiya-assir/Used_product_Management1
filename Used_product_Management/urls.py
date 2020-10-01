@@ -18,7 +18,8 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path,include
 import django.contrib.auth.urls
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 from Seller import views as seller_views
 from Buyer import views as buyer_views
@@ -40,8 +41,11 @@ urlpatterns = [
     path('sellerinsert/',seller_views.insertseller,name='insertseller'),
     path('registration',user_views.registration,name='registration'),
     path('accounts/',include('django.contrib.auth.urls')),
-    path('createprofile/', user_views.create_profile, name='create_profile')
+    path('createprofile/', user_views.create_profile, name='create_profile'),
+    path('viewprofile/', user_views.view_profile, name='view_profile')
 
 
 
 ]
+if settings.DEBUG == True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
