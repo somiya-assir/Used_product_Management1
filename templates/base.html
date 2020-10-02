@@ -1,45 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title> USED PRODUCT MANAGEMENT</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <!-- Navbar content -->
+
+
+  <a class="navbar-brand" href="#">Used product management</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+
+        <a class="nav-link" href="{% url 'show_product' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
 
 
 
-    <a href="{% url 'insertseller' %}">sellerinsertion</a><br>
-    <a href="{% url 'show_product' %}">show product</a><br>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          insertion
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-{% if user.is_authenticated %}
-    <h3>{{ user.username }}</h3>
+          <a class="dropdown-item" href="{% url 'insert_product' %}">Product Insert</a>
+           <a class="dropdown-item" href="{% url 'insertseller' %}">sellerinsertion</a>
 
-    <a href="{% url 'sellerlist' %}">sellerlist</a><br>
-    <a href="{% url 'logout' %}">logout</a><br>
-    <a href="{% url 'password_change' %}">change password</a><br>
-    <a href="{% url 'create_profile' %}">Create Profile</a><br>
-    <a href="{% url 'view_profile' %}">Show Profile</a><br>
-    <a href="{% url 'insert_product' %}">insert product</a><br>
-
+        </div>
+      </li>
 
 
-{% else %}
-    <h3>Unknown User </h3>
-     <a href="{% url 'registration' %}">signup</a><br>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'create_profile' %}">Create Profile</a>
+            <a class="dropdown-item" href="{% url 'view_profile' %}">Show Profile</a>
 
-     <a href="{% url 'login' %}">login</a><br>
+        </div>
+      </li>
 
-{% endif %}
 
-{% block content %}
 
+        <li class="nav-item dropdown">
+
+            {% if user.is_authenticated %}
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          User
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+
+            <a class="dropdown-item" href="{% url 'logout' %}">logout</a>
+            <a class="dropdown-item" href="{% url 'password_change' %}">change password</a>
+            <a class="dropdown-item" href="{% url 'show_product' %}">show product</a><br>
+
+        </div>
+
+            {% else %}
+
+
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          LogIn
+                </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+            <a class="dropdown-item" href="{% url 'registration' %}">signup</a>
+            <a class="dropdown-item" href ="{% url 'login' %}">login</a>
+
+        </div>
+
+
+        {% endif %}
+
+      </li>
+
+    </ul>
+
+
+
+
+
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
+  <div class="container">
+
+ {% block content %}
+
+
+ {% endblock content %}
+</div>
 <br>
-
-
-{% endblock content %}
-
 <br>
-<br>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <h2>Contact with us</h2>
+
+
 </body>
 </html>
