@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> USED PRODUCT MANAGEMENT</title>
+    <title> <b style="color: olive";>USED PRODUCT MANAGEMENT</b></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +18,7 @@
   <!-- Navbar content -->
 
 
-  <a class="navbar-brand" href="#">Used product management</a>
+    <a class="navbar-brand" href="#"><b style="color: olive";>Used product management</b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,19 +27,19 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
 
-        <a class="nav-link" href="{% url 'show_product' %}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{% url 'show_product' %}"><b style="color: greenyellow";>Home</b><span class="sr-only">(current)</span></a>
       </li>
 
 
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          insertion
+            <b style="color: greenyellow";> insertion</b>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-          <a class="dropdown-item" href="{% url 'insert_product' %}">Product Insert</a>
-           <a class="dropdown-item" href="{% url 'insertseller' %}">sellerinsertion</a>
+            <a class="dropdown-item" href="{% url 'insert_product' %}"> <b style="color: olive";>Product Insert</b></a>
+            <a class="dropdown-item" href="{% url 'insertseller' %}"> <b style="color: olive";>sellerinsertion</b></a>
 
         </div>
       </li>
@@ -47,11 +47,11 @@
 
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          profile
+            <b style="color: greenyellow";> profile</b>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{% url 'create_profile' %}">Create Profile</a>
-            <a class="dropdown-item" href="{% url 'view_profile' %}">Show Profile</a>
+            <a class="dropdown-item" href="{% url 'create_profile' %}"><b style="color: olive";>Create Profile</b></a>
+                <a class="dropdown-item" href="{% url 'view_profile' %}"><b style="color: olive";>Show Profile</b></a>
 
         </div>
       </li>
@@ -62,15 +62,15 @@
 
             {% if user.is_authenticated %}
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          User
+            <b style="color: greenyellow";> User</b>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 
 
-            <a class="dropdown-item" href="{% url 'logout' %}">logout</a>
-            <a class="dropdown-item" href="{% url 'password_change' %}">change password</a>
-            <a class="dropdown-item" href="{% url 'show_product' %}">show product</a><br>
+            <a class="dropdown-item" href="{% url 'logout' %}"><b style="color: olive";>logout</b></a>
+            <a class="dropdown-item" href="{% url 'password_change' %}"><b style="color: olive";>change password</b></a>
+            <a class="dropdown-item" href="{% url 'show_product' %}"><b style="color:olive";>show product</b></a><br>
 
         </div>
 
@@ -78,12 +78,12 @@
 
 
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          LogIn
+                    <b style="color: greenyellow";>LogIn</b>
                 </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-            <a class="dropdown-item" href="{% url 'registration' %}">signup</a>
-            <a class="dropdown-item" href ="{% url 'login' %}">login</a>
+              <a class="dropdown-item" href="{% url 'registration' %}"><b style="color: olive";>signup</b></a>
+              <a class="dropdown-item" href ="{% url 'login' %}"><b style="color: olive";>login</b></a>
 
         </div>
 

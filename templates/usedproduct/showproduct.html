@@ -2,7 +2,10 @@
 {% load static %}
 
 {% block content %}
-    <h1> Product information</h1>
+
+
+    <!--<body style="background-color:MediumSeaGreen;">-->
+    <h1 style="color: darkkhaki" ;> Product information</h1>
     {% for i in userlist %}
 
 
@@ -12,11 +15,11 @@
   <img src="{{ i.product_pic.url }}" class="card-img-top" alt="...">
   <div class="card-body">
 
-    <h5 class="{{ i.product_type}}">Product Type</h5>
+      <p style="border:2px solid MediumSeaGreen ;"><b style="color: olive";>product type: </b>{{ i.product_type}}</p>
     <p class="card-text">
 
-         product weight: {{ i.weight}} kg<br>
-         product price: {{ i.price }} taka<br>
+        <b style="color: greenyellow";>  product weight: </b> {{ i.weight}} kg<br>
+        <b style="color: greenyellow";> product price per kg: </b> {{ i.price }} taka<br>
 
     </p>
 
