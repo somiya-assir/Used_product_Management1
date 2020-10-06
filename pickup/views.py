@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from .models import Pickup
 from .forms import Pickupinsertform
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def pickUp(request):
     all_pickup=Pickup.objects.all()
 
@@ -11,7 +13,7 @@ def pickUp(request):
     }
 
     return render(request,'pickup/pickinfo.html',context)
-
+@login_required
 def insertpickup(request):
     form=Pickupinsertform()
     msg="seller information "

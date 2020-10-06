@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'Employee.apps.EmployeeConfig',
     'Buyercost.apps.BuyercostConfig',
     'Buyer.apps.BuyerConfig',
-    'Usermanagement.apps.UsermanagementConfig'
+    'Usermanagement.apps.UsermanagementConfig',
+    'Home.apps.HomeConfig'
 
 
 
