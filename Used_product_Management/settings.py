@@ -45,12 +45,14 @@ INSTALLED_APPS = [
     'Employee.apps.EmployeeConfig',
     'Sellercost.apps.SellercostConfig',
     'Buyer.apps.BuyerConfig',
-    'Usermanagement.apps.UsermanagementConfig'
+    'Usermanagement.apps.UsermanagementConfig',
+    'Home.apps.HomeConfig',
+    'crispy_forms'
 
 
 
 ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 
 {% block content %}
     <h1>Login:</h1>
@@ -7,12 +7,24 @@
 
     {% csrf_token %}
 
-    {{ form.as_p }}
-    <input type="submit">
+    {{ form | crispy }}
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
 
 
 
     </form>
+
+    <div class="media">
+  <div class="media-body">
+    <h5 class="mt-0 mb-1"></h5>
+
+  </div>
+  <img src="/media/images/home/login.jpg" height="300" width="300" class="ml-3" alt="...">
+</div>
+
+
 
 
 {%  endblock content %}

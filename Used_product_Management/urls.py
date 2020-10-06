@@ -29,7 +29,8 @@ from Payment import views as pay_views
 from pickup import views as pickup_views
 from Usermanagement import views as user_views
 from Usedproduct import views as product_views
-
+from pickup import views as pickup_views
+from Home import views as home_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('seller/',seller_views.showseller,name='sellerlist'),
@@ -46,6 +47,9 @@ urlpatterns = [
     path('viewprofile/', user_views.view_profile, name='view_profile'),
     path('showproduct/', product_views.showsproduct, name='show_product'),
     path('insertproduct/', product_views.insertpoduct, name='insert_product'),
+    path('insertpickup/',pickup_views.insertpickup,name='insertpickup'),
+    path('home/', home_views.showhome, name='home'),
+    path('pricelist/', home_views.showpricelist, name='pricelist'),
 
 
 
