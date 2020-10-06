@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'pickup.apps.PickupConfig',
     'Payment.apps.PaymentConfig',
     'Employee.apps.EmployeeConfig',
-    'Buyercost.apps.BuyercostConfig',
+    'Sellercost.apps.SellercostConfig',
     'Buyer.apps.BuyerConfig',
     'Usermanagement.apps.UsermanagementConfig'
 

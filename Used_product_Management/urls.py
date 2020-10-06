@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 
 from Seller import views as seller_views
 from Buyer import views as buyer_views
-from Buyercost import  views as buyercost_views
+from Sellercost import  views as sellercost_views
 from Employee import views as employee_views
 from Payment import views as pay_views
 from pickup import views as pickup_views
@@ -34,7 +34,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('seller/',seller_views.showseller,name='sellerlist'),
     path('buyer/',buyer_views.buyerinfo,name='buyer'),
-    path('buyercost',buyercost_views.buyercost,name='buyercost'),
+    path('showsellercost',sellercost_views.showsellercost,name='sellercost'),
     path('employee/',employee_views.employee,name='employee'),
     path('payment/',pay_views.showpayment,name='payment'),
     path('pickup/',pickup_views.pickUp,name='pickup'),
