@@ -32,7 +32,7 @@ def create_profile(request):
             instance = form.save(commit=False)
             instance.user = request.user
             instance.save()
-            return redirect('login')
+            return redirect('view_profile')
 
     context = {
         'form' : form

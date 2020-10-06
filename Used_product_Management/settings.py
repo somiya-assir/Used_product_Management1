@@ -46,12 +46,13 @@ INSTALLED_APPS = [
     'Buyercost.apps.BuyercostConfig',
     'Buyer.apps.BuyerConfig',
     'Usermanagement.apps.UsermanagementConfig',
-    'Home.apps.HomeConfig'
+    'Home.apps.HomeConfig',
+    'crispy_forms'
 
 
 
 ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
