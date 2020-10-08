@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block content  %}
+
+<div class="media">
+  <img src="{{search.product_pic.url}}" class="align-self-center mr-3" alt="...">
+  <div class="media-body">
+    <h2 class="mt-0">{{ search.product_type }}</h2>
+      <b style="color:green;font-size: 18px";>  product weight: </b> {{ search.weight}} kg<br>
+      <b style="color:green;font-size: 18px";>  Price: </b> {{ search.price}} TK<br>
+      <b style="color:green;font-size: 18px";> Seller name: </b> {{ search.seller}} <br>
+
+      <br>
+
+         <b style="color:black;font-size: 18px";> Description: </b> {{ search.description}} <br>
+
+    <p class="mb-0"> </p>
+  </div>
+</div>
+
+{% endblock content %}

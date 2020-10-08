@@ -50,6 +50,7 @@ urlpatterns = [
     path('insertpickup/',pickup_views.insertpickup,name='insertpickup'),
     path('home/', home_views.showhome, name='home'),
     path('pricelist/', home_views.showpricelist, name='pricelist'),
+    path('showproduct/<int:product_id>', product_views.showDetails, name='detail_views'),
 
 
 
