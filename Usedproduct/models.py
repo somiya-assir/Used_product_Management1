@@ -13,6 +13,7 @@ class Usedproduct(models.Model):
     Buyer = models.ForeignKey(Buyer, on_delete=models.CASCADE, default=1, null=True, blank=True)
 
 
+
     def __str__(self):
         return self.product_type
 
