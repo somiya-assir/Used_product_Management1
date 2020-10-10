@@ -34,8 +34,18 @@ def insertpoduct(request):
 
 
 def showDetails(request, product_id):
-    searched_info = get_object_or_404(Usedproduct, id=product_id)
-    context = {
-        'search': searched_info
-    }
+    searched_info = Usedproduct.objects.filter(id=product_id)
+    if len(searched_info) == 0:
+        does_exists = False
+        context = {
+            'does_exists': does_exists,
+        }
+    else:
+        does_exists = True
+        search =  searched_info[0]
+        context = {
+            'does_exists': does_exists,
+            'search': search
+        }
+
     return render(request, 'usedproduct/showproductdetails.html', context)

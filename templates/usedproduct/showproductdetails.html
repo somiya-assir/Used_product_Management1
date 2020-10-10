@@ -5,8 +5,8 @@
 
 
 {% block content  %}
-
-<div class="media">
+    {% if does_exists == True %}
+        <div class="media">
   <img src="{{search.product_pic.url}}" class="align-self-center mr-3" alt="...">
   <div class="media-body">
     <h2 class="mt-0">{{ search.product_type }}</h2>
@@ -21,5 +21,14 @@
     <p class="mb-0"> </p>
   </div>
 </div>
+
+    {% else %}
+        <br>
+        <br>
+
+       <h1> <b style="color:teal;font-size: 18px";>No products to show<br>Thanks for using our Service.. </b><br></h1>
+    {% endif %}
+
+
 
 {% endblock content %}
