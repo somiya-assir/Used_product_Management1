@@ -10,6 +10,12 @@ from django.contrib.auth.decorators import login_required
 def showsproduct(request):
     alluser = Usedproduct.objects.all()
 
+    if request.method == 'POST':
+        alluser = Usedproduct.objects.filter(product_type__icontains= request.POST['search'])
+        seller1=Usedproduct.objects.filter(id__icontains= request.POST['search'])
+
+        alluser= alluser | seller1
+
     contex = {
         'userlist': alluser
     }
