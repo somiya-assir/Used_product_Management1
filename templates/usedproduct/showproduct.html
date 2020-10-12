@@ -4,41 +4,40 @@
 {% block content %}
 
 
-    <!--<body style="background-color:MediumSeaGreen;">-->
+
     <h1 style="color: darkkhaki" ;> Product information</h1>
-    <div class="card-columns">
-    {% for i in userlist %}
+ <div class="card-columns">
+     {% for i in userlist %}
 
+    <div class="card h-100" style="width: 18rem;">
 
-
-
-<div class="card" style="width: 18rem;">
   <img src="{{ i.product_pic.url }}" class="card-img-top" alt="...">
   <div class="card-body">
 
-      <p style="border:2px solid MediumSeaGreen ;"><b style="color: olive";>product type: </b>{{ i.product_type}}</p>
-    <p class="card-text">
+    <h5 class="card-title"><b style="color: olive";>product type: </b>{{ i.product_type}}</h5>
 
-        <b style="color: greenyellow";>  product weight: </b> {{ i.weight}} kg<br>
+    <p class="card-text">
+     <b style="color: greenyellow";>  product weight: </b> {{ i.weight}} kg<br>
         <b style="color: greenyellow";> product price per kg: </b> {{ i.price }} taka<br>
           <b style="color: greenyellow";> seller information </b> {{ i.seller }} <br>
 
     </p>
-                <a href="{{ i.id }}">
-                    {# http://127.0.0.1:8000/products/product_id    #}
-                    <button type="Submit" class="btn btn-outline-primary">Details</button>
+
+     <a href="{{ i.id }}">
+
+
+          <button type="submit" class="btn btn-success">Details</button>
                 </a>
-      {% endfor %}
+
+
+
 
   </div>
 </div>
-
-
-
-
-
+   {% endfor %}
+ </div>
         <br>
         <br>
 
-    </div>
+
 {% endblock content %}

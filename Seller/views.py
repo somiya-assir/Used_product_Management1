@@ -15,7 +15,7 @@ def showseller(request):
     }
     return render(request, 'sellermanagement/sellerlist.html', contex)
 #@login_required
-@login_required
+
 def insertseller(request):
     form=SellerInput()
     msg="seller information "

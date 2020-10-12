@@ -34,6 +34,10 @@
 
           <a class="nav-link" href="{% url 'pricelist' %}"><b style="color: green";>Pricelist</b><span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+
+          <a class="nav-link" href="{% url 'show_product' %}"><b style="color:green";>show product</b><span class="sr-only">(current)</span></a>
+      </li>
 
 
       <li class="nav-item dropdown">
@@ -42,23 +46,25 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-            <a class="dropdown-item" href="{% url 'insert_product' %}"> <b style="color: green";>Product Insert</b></a>
+          <!--  <a class="dropdown-item" href="{''% url 'insert_product' %}"> <b style="color: green";>Product Insert</b></a>-->
             <a class="dropdown-item" href="{% url 'insertseller' %}"> <b style="color: green";>sellerinsertion</b></a>
-            <a class="dropdown-item" href="{% url 'insertpickup' %}"> <b style="color: green";>pickup</b></a>
+           <!-- <a class="dropdown-item" href="{'''% url 'insertpickup' %}"> <b style="color: green";>pickup</b></a>}-->
         </div>
       </li>
 
 
-    <li class="nav-item dropdown">
+
+
+   <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <b style="color: green";> profile</b>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{% url 'create_profile' %}"><b style="color: black";>Create Profile</b></a>
-                <a class="dropdown-item" href="{% url 'view_profile' %}"><b style="color: black";>Show Profile</b></a>
+            <a class="dropdown-item" href="{''% url 'create_profile' %}"><b style="color: green";>Create Profile</b></a>
+                <a class="dropdown-item" href="{''% url 'view_profile' %}"><b style="color: green";>Show Profile</b></a>
 
         </div>
-      </li>
+      </li>-->
 
 
 
@@ -74,7 +80,21 @@
 
             <a class="dropdown-item" href="{% url 'logout' %}"><b style="color: olive";>logout</b></a>
             <a class="dropdown-item" href="{% url 'password_change' %}"><b style="color: olive";>change password</b></a>
-            <a class="dropdown-item" href="{% url 'show_product' %}"><b style="color:olive";>show product</b></a><br>
+
+             <a class="dropdown-item" href="{% url 'insert_product' %}"> <b style="color: green";>Product Insert</b></a>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b style="color: green";> profile</b>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'create_profile' %}"><b style="color: green";>Create Profile</b></a>
+                <a class="dropdown-item" href="{% url 'view_profile' %}"><b style="color: green";>Show Profile</b></a>
+
+        </div>
+      </li>
+
+
+
 
         </div>
 
@@ -147,9 +167,9 @@
 <h2 style="color:green; margin-left: 30px"> Contact with us </h2>
 <p style=" margin-left: 30px">
 
-    <img src="/media/images/product/facebook.png" height="50" width="50">
-    <img src="/media/images/product/insta.png" height="50" width="50"  style="margin-left: 10px">
-    <img src="/media/images/product/twitter.png" height="60" width="60"  style="margin-left: 10px">
+    <b><a href="https://www.facebook.com/Vangariwala-112066524007824/?modal=admin_todo_tour"> <img src="/media/images/product/facebook.png" height="50" width="50"></a>
+   <!-- <img src="/media/images/product/insta.png" height="50" width="50"  style="margin-left: 10px">
+    <img src="/media/images/product/twitter.png" height="60" width="60"  style="margin-left: 10px">-->
     <span style="margin-left: 600px; font-weight: 800;">
        About Us
 

@@ -2,9 +2,16 @@
 {% load static %}
 
 {% block content %}
-    <img src="{{ profile.pro_pic.url }}" height="200" width="200">
 
-   <h2>contact no: </h2> {{ profile.contact_no  }}<br>
+<div class="media">
+  <img src="{{ profile.pro_pic.url }}" height="200" width="200" class="align-self-center mr-3" alt="...">
+  <div class="media-body">
+    <h5 class="mt-0">contact no: </h2> {{ profile.contact_no  }}</h5>
+
+  </div>
+</div>
+
+
 
 
 {% endblock content %}
