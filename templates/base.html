@@ -27,35 +27,35 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
 
-          <a class="nav-link" href="{% url 'home' %}"><b style="color: greenyellow";>Home</b><span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{% url 'home' %}"><b style="color: green";>Home</b><span class="sr-only">(current)</span></a>
       </li>
 
        <li class="nav-item active">
 
-          <a class="nav-link" href="{% url 'pricelist' %}"><b style="color: greenyellow";>Pricelist</b><span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{% url 'pricelist' %}"><b style="color: green";>Pricelist</b><span class="sr-only">(current)</span></a>
       </li>
 
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b style="color: greenyellow";> insertion</b>
+            <b style="color: green";> insertion</b>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-            <a class="dropdown-item" href="{% url 'insert_product' %}"> <b style="color: olive";>Product Insert</b></a>
-            <a class="dropdown-item" href="{% url 'insertseller' %}"> <b style="color: olive";>sellerinsertion</b></a>
-            <a class="dropdown-item" href="{% url 'insertpickup' %}"> <b style="color: olive";>pickup</b></a>
+            <a class="dropdown-item" href="{% url 'insert_product' %}"> <b style="color: green";>Product Insert</b></a>
+            <a class="dropdown-item" href="{% url 'insertseller' %}"> <b style="color: green";>sellerinsertion</b></a>
+            <a class="dropdown-item" href="{% url 'insertpickup' %}"> <b style="color: green";>pickup</b></a>
         </div>
       </li>
 
 
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b style="color: greenyellow";> profile</b>
+            <b style="color: green";> profile</b>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{% url 'create_profile' %}"><b style="color: olive";>Create Profile</b></a>
-                <a class="dropdown-item" href="{% url 'view_profile' %}"><b style="color: olive";>Show Profile</b></a>
+            <a class="dropdown-item" href="{% url 'create_profile' %}"><b style="color: black";>Create Profile</b></a>
+                <a class="dropdown-item" href="{% url 'view_profile' %}"><b style="color: black";>Show Profile</b></a>
 
         </div>
       </li>
@@ -66,7 +66,7 @@
 
             {% if user.is_authenticated %}
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b style="color: greenyellow";> User</b>
+            <b style="color: green";> User</b>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
@@ -98,6 +98,15 @@
 
     </ul>
 
+       <form method="POST" action="{% url 'show_product' %}">
+                {% csrf_token %}
+
+              <input  type="search" name="search">
+
+              <button  type="submit">Search</button>
+            </form>
+
+
 
 
 
@@ -108,7 +117,7 @@
 </nav>
 
 
-
+        <
 
 
   <div class="container">

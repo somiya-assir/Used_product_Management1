@@ -21,8 +21,14 @@
 
         <b style="color: greenyellow";>  product weight: </b> {{ i.weight}} kg<br>
         <b style="color: greenyellow";> product price per kg: </b> {{ i.price }} taka<br>
+          <b style="color: greenyellow";> seller information </b> {{ i.seller }} <br>
 
     </p>
+                <a href="{{ i.id }}">
+                    {# http://127.0.0.1:8000/products/product_id    #}
+                    <button type="Submit" class="btn btn-outline-primary">Details</button>
+                </a>
+      {% endfor %}
 
   </div>
 </div>
@@ -33,6 +39,6 @@
 
         <br>
         <br>
-    {% endfor %}
+
     </div>
 {% endblock content %}

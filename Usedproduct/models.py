@@ -11,6 +11,8 @@ class Usedproduct(models.Model):
     product_pic= models.ImageField(upload_to='images/product', blank=True, null=True)
     seller = models.ForeignKey(Seller, on_delete=models.CASCADE, default=1, null=True)
     Buyer = models.ForeignKey(Buyer, on_delete=models.CASCADE, default=1, null=True, blank=True)
+    description= models.TextField(max_length=300,null=True, blank=True)
+
 
 
     def __str__(self):
