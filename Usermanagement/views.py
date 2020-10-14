@@ -14,7 +14,9 @@ def registration(request):
         form = UserCreationForm(request.POST)
 
         if form.is_valid():
-         form.save()
+         user=form.save(commit=False)
+         user.is_active=False
+         user.save()
          return redirect('login')
 
     context={

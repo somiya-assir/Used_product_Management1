@@ -1,4 +1,5 @@
-from django.shortcuts import render
+
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Pickup
 from .forms import Pickupinsertform
 from django.contrib.auth.decorators import login_required
@@ -25,6 +26,8 @@ def insertpickup(request):
           form.save()
           form=Pickupinsertform()
           msg="successfull🎈"
+
+          return redirect('home')
 
 
     context={
